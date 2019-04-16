@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="JavaScript入门语法"><meta name="keywords" content="JavaScript"><meta name="author" content="Joker,undefined"><meta name="copyright" content="Joker"><title>JavaScript入门语法 | Joker's Blog</title><link rel="shortcut icon" href="/my-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.5.6"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.5.6"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript-语法入门"><span class="toc-number">1.</span> <span class="toc-text">Javascript 语法入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本语法"><span class="toc-number">1.1.</span> <span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语句"><span class="toc-number">1.1.1.</span> <span class="toc-text">语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#变量"><span class="toc-number">1.1.2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注释"><span class="toc-number">1.1.3.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if-else-amp-amp-for-循环"><span class="toc-number">1.1.4.</span> <span class="toc-text">if else &amp;&amp; for 循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标签（label）"><span class="toc-number">1.1.5.</span> <span class="toc-text">标签（label）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据类型"><span class="toc-number">1.1.6.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#typeof"><span class="toc-number">1.1.7.</span> <span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数值"><span class="toc-number">1.1.8.</span> <span class="toc-text">数值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#几种与数值相关的方法"><span class="toc-number">1.1.9.</span> <span class="toc-text">几种与数值相关的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串"><span class="toc-number">1.1.10.</span> <span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象"><span class="toc-number">1.1.11.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关于对象的操作"><span class="toc-number">1.1.12.</span> <span class="toc-text">关于对象的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数"><span class="toc-number">1.1.13.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数作用域"><span class="toc-number">1.1.14.</span> <span class="toc-text">函数作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.1.15.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特别说明-与-运算符"><span class="toc-number">1.1.16.</span> <span class="toc-text">特别说明 == 与 === 运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#void运算符"><span class="toc-number">1.1.17.</span> <span class="toc-text">void运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据类型转换"><span class="toc-number">1.1.18.</span> <span class="toc-text">数据类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#错误与异常处理"><span class="toc-number">1.1.19.</span> <span class="toc-text">错误与异常处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#console-对象与控制台"><span class="toc-number">1.2.</span> <span class="toc-text">console 对象与控制台</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://wx3.sinaimg.cn/large/006Dr5U1ly1fzho2dosgfj30gr0gq40t.jpg"></div><div class="author-info__name text-center">Joker</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">4</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container" style="background-image: url(true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Joker's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">JavaScript入门语法</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-04-12</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="Javascript-语法入门"><a href="#Javascript-语法入门" class="headerlink" title="Javascript 语法入门"></a>Javascript 语法入门</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h4 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h4><p>JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。<br>（和Python一样，JS也是一种解释型的脚本语言）    </p>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>JS是一种弱类型的语言（这一点与PHP、Python相同）</p>
+<p><code>var a = 1</code></p>
+<p>注意，JavaScript 的变量名区分大小写，A和a是两个不同的变量。</p>
+<p>如果只是声明变量而没有赋值，则该变量的值是undefined。undefined是一个特殊的值，表示“无定义”。</p>
+<p>如果一个变量没有声明就直接使用，JavaScript 会报错，告诉你变量未定义。</p>
+<p>关于变量名的命名方式，JS与其他语言没什么区别</p>
+<p><code>1a  // 第一个字符不能是数字</code></p>
+<p><code>***  // 标识符不能包含星号</code></p>
+<p><code>a+b  // 标识符不能包含加号</code></p>
+<p>以上均是不合法的命名（注意：在JS中，中文是合法的标识符）</p>
+<p><code>var 这是一个变量 = 1</code></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><pre><code>在JS中提供了三种注释的方法：
+
+`` // 这是一行注释 ``
+
+``/**/ 多行注释``
+
+``&lt;!----&gt;继承了HTML的注释方式``
+
+（注意：需要注意的是，--&gt;只有在行首，才会被当成单行注释，否则会当作正常的运算。）
+</code></pre><h4 id="if-else-amp-amp-for-循环"><a href="#if-else-amp-amp-for-循环" class="headerlink" title="if else &amp;&amp; for 循环"></a>if else &amp;&amp; for 循环</h4><pre><code>任何程序都逃脱不了if else &amp;&amp; for 循环，JS中的循环判断与其他语言没有什么差别
+
+注意，if后面的表达式之中，不要混淆赋值表达式（=）、严格相等运算符（===）和相等运算符（==）。尤其是赋值表达式不具有比较作用。
+</code></pre><h4 id="标签（label）"><a href="#标签（label）" class="headerlink" title="标签（label）"></a>标签（label）</h4><p>JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置，标签的格式如下</p>
+<p>标签可以是任意的标识符，但不能是保留字（标签通常与break、continue配合使用）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">top: </span><br><span class="line">		 for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">  			 for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">    			 if (i === 1 &amp;&amp; j === 1) continue top;</span><br><span class="line">    		 console.log(&apos;i=&apos; + i + &apos;, j=&apos; + j);</span><br><span class="line">   	&#125;</span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>上面代码中，continue命令后面有一个标签名，满足条件时，会跳过当前循环，直接进入下一轮外层循环。
+如果continue语句后面不使用标签，则只能进入下一轮的内层循环。
+</code></pre><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>JavaScript 语言的每一个值，都属于某一种数据类型。这也就是弱类型语言在赋值时可判断变量的数据类型的原因。</p>
+<p>在基础的JS语言中将会涉及到六种数据类型（ES6中有新添加了一种）</p>
+<ul>
+<li>数值（number）：整数和小数（比如1和3.14）</li>
+<li>字符串（string）：文本（比如Hello World）。</li>
+<li>布尔值（boolean）：表示真伪的两个特殊值，即true（真）和false（假）</li>
+<li>undefined：表示“未定义”或不存在，即由于目前没有定义，所以此处暂时没有任何值</li>
+<li>null：表示空值，即此处的值为空。</li>
+<li><p>对象（object）：各种值组成的集合。</p>
+<p>  其中，对象（object）右可分为：狭义对象、数组、函数（函数可以返回数据，所以在JS中被称为对象）</p>
+</li>
+</ul>
+<h4 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h4><p>JavaScript 有三种方法，可以确定一个值到底是什么类型</p>
+<ul>
+<li>typeof运算符</li>
+<li>instanceof运算符</li>
+<li>Object.prototype.toString方法</li>
+</ul>
+<p>typeof运算符可以返回一个值的数据类型。</p>
+<p>数值、字符串、布尔值分别返回number、string、boolean，函数返回funcation，undefined返回undefined，<br>对象返回Object</p>
+<p>在实际的编程中可用其进行条件判断，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	if (typeof v === &quot;undefined&quot;) &#123;</span><br><span class="line"> 		// ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>####关于null与undefine的几点说明</p>
+<p>null与undefined都可以表示“没有”，含义非常相似。将一个变量赋值为undefined或null，<br>在实际的编程使用的过程中效果几乎没区别。</p>
+<p>要是非要说个一二三，那便要谈及历史问题：</p>
+<pre><code>在第一版的JavaScript中将null规定为Object类型，
+表示“无&quot;(与C语言中类似，C语言中也根据编译环境来区分)
+
+null可转换为数字0，而undefined在转为数值类型时将是NaN
+</code></pre><h4 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h4><p>JavaScript 内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。<br>所以，1与1.0是相同的，是同一个数。</p>
+<p>所以在使用的时候，小心精度问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0.1 + 0.2 === 0.3</span><br><span class="line">// false</span><br><span class="line"></span><br><span class="line">0.3 / 0.1</span><br><span class="line">// 2.9999999999999996</span><br><span class="line"></span><br><span class="line">(0.3 - 0.2) === (0.2 - 0.1)</span><br><span class="line">// false</span><br></pre></td></tr></table></figure></p>
+<p>需要注意几点：</p>
+<ol>
+<li><strong><em>NaN</em></strong>是 JavaScript 的特殊值，表示“非数字”（Not a Number），<br>主要出现在将字符串解析成数字出错的场合。</li>
+<li><strong><em>Infinity</em></strong>表示“无穷”，用来表示两种场景。一种是一个正的数值太大，<br>或一个负的数值太小，无法表示；另一种是非0数值除以0，得到Infinity。</li>
+</ol>
+<h4 id="几种与数值相关的方法"><a href="#几种与数值相关的方法" class="headerlink" title="几种与数值相关的方法"></a>几种与数值相关的方法</h4><ul>
+<li><p>parseInt()</p>
+<p> parseInt方法用于将字符串转为整数。</p>
+</li>
+<li><p>parseFloat() </p>
+<p>parseFloat方法用于将一个字符串转为浮点数。</p>
+</li>
+<li><p>isNaN()</p>
+<p>isNaN方法可以用来判断一个值是否为NaN。</p>
+</li>
+<li><p>isFinite()<br>isFinite方法返回一个布尔值，表示某个值是否为正常的数值。</p>
+</li>
+</ul>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>用单引号或双引号包裹起来的多个字符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&apos;abc&apos;</span><br><span class="line">&quot;abc&quot;</span><br><span class="line">//(推荐使用单引号)</span><br></pre></td></tr></table></figure></p>
+<p>单引号字符串的内部，可以使用双引号。双引号字符串的内部，可以使用单引号。</p>
+<p>但是如果要在单引号字符串的内部，使用单引号，就必须在内部的单引号前面加上反斜杠，<br>用来转义。双引号字符串内部使用双引号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&apos;Did she say \&apos;Hello\&apos;?&apos;</span><br><span class="line">// &quot;Did she say &apos;Hello&apos;?&quot;</span><br><span class="line"></span><br><span class="line">&quot;Did she say \&quot;Hello\&quot;?&quot;</span><br><span class="line">// &quot;Did she say &quot;Hello&quot;?&quot;</span><br></pre></td></tr></table></figure></p>
+<p>字符串可以被视为字符数组，因此可以使用数组的方括号运算符，用来返回某个位置的字符（位置编号从0开始）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var s = &apos;hello&apos;;</span><br><span class="line">s[1] // &quot;e&quot;</span><br><span class="line">s[4] // &quot;o&quot;</span><br><span class="line"></span><br><span class="line">// 直接对字符串使用方括号运算符</span><br><span class="line">&apos;hello&apos;[1] // &quot;e&quot;</span><br></pre></td></tr></table></figure></p>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>什么是对象？简单说，对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line"> 	foo: &apos;Hello&apos;,</span><br><span class="line"> 	bar: &apos;World&apos;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>对象的每一个键名又称为“属性”（property），它的“键值”可以是任何数据类型。如果一个属性的值为函数，<br>通常把这个属性称为“方法”，它可以像函数那样调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line"> 	p: function (x) &#123;</span><br><span class="line">   return 2 * x;</span><br><span class="line"> 		&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.p(1) // 2</span><br></pre></td></tr></table></figure>
+<p><strong><em>特别说明：</em></strong></p>
+<p>在JavaScript中对象采用大括号来表示，这导致了一个问题：如果行首是一个大括号，<br>它到底是表达式还是语句？</p>
+<p><code>{ foo: 123 }</code></p>
+<p>为了避免这种歧义，JavaScript 引擎的做法是，如果遇到这种情况，<br>无法确定是对象还是代码块，一律解释为代码块。</p>
+<p>如果要解释为对象，最好在大括号前加上圆括号。因为圆括号的里面，<br>只能是表达式，所以确保大括号只能解释为对象。</p>
+<p><code>({ foo: 123 })</code></p>
+<h4 id="关于对象的操作"><a href="#关于对象的操作" class="headerlink" title="关于对象的操作"></a>关于对象的操作</h4><p>在JavaScript中操作对象的方法有两种：一种是使用点运算符，还有一种是使用方括号运算符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line"> 	p: &apos;Hello World&apos;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.p // &quot;Hello World&quot;</span><br><span class="line">obj[&apos;p&apos;] // &quot;Hello World&quot;</span><br></pre></td></tr></table></figure></p>
+<p>不过一般都使用点运算符</p>
+<p>利用for…in 循环进行属性的遍历<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;a: 1, b: 2, c: 3&#125;;</span><br><span class="line"></span><br><span class="line">for (var i in obj) &#123;</span><br><span class="line"> 		console.log(&apos;键名：&apos;, i);</span><br><span class="line">	 	console.log(&apos;键值：&apos;, obj[i]);</span><br><span class="line">&#125;</span><br><span class="line">// 键名： a</span><br><span class="line">// 键值： 1</span><br><span class="line">// 键名： b</span><br><span class="line">// 键值： 2</span><br><span class="line">// 键名： c</span><br><span class="line">// 键值： 3</span><br></pre></td></tr></table></figure></p>
+<p>for…in循环有两个使用注意点:</p>
+<p>它遍历的是对象所有可遍历（enumerable）的属性，会跳过不可遍历的属性。<br>它不仅遍历对象自身的属性，还遍历继承的属性。</p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>在JavaScript中一般使用三种方法来构造函数：</p>
+<ol>
+<li><p>function 命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function print(s) &#123;</span><br><span class="line">	 console.log(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>匿名函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var print = function(s) &#123;</span><br><span class="line"> 		console.log(s);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Function 构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var add = new Function(</span><br><span class="line">		 &apos;x&apos;,</span><br><span class="line"> 		&apos;y&apos;,</span><br><span class="line"> 		&apos;return x + y&apos;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">// 等同于</span><br><span class="line">function add(x, y) &#123;</span><br><span class="line"> 		return x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h4><p>与其他编程语言相同。JavaScript（ES5）的函数作用域有两种：</p>
+<p>一种是全局作用域，变量在整个程序中一直存在，所有地方都可以读取；<br>另一种是函数作用域，变量只在函数内部存在。</p>
+<p>在JavaScript中有一个较为重要的概念为闭包，这里先不去介绍，后续会专题讲解。</p>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>数组（array）是按次序排列的一组值。每个值的位置都有编号（从0开始），整个数组用方括号表示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</span><br></pre></td></tr></table></figure></p>
+<p>其实在JavaScript中将数字当作对象处理，我们可以使用typeof来观察类型</p>
+<h4 id="特别说明-与-运算符"><a href="#特别说明-与-运算符" class="headerlink" title="特别说明 == 与 === 运算符"></a>特别说明 == 与 === 运算符</h4><p>简单说，它们的区别是相等运算符（==）比较两个值是否相等，<br>严格相等运算符（===）比较它们是否为“同一个值”。如果两个值不是同一类型，<br>严格相等运算符（===）直接返回false，而相等运算符（==）会将它们转换成同一个类型，<br>再用严格相等运算符进行比较。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 === &quot;1&quot; // false</span><br><span class="line">true === &quot;true&quot; // false</span><br><span class="line">1 === 0x1 // true</span><br></pre></td></tr></table></figure></p>
+<h4 id="void运算符"><a href="#void运算符" class="headerlink" title="void运算符"></a>void运算符</h4><p>这个运算符的主要用途是浏览器的书签工具（Bookmarklet），以及在超级链接中插入代码防止网页跳转。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;javascript: void(document.form.submit())&quot;&gt;</span><br><span class="line"> 	提交</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>当用户点击提交按钮后，页面并不会跳转。</p>
+<h4 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h4><ol>
+<li><strong><em>Number()</em></strong></li>
+</ol>
+<p>使用Number函数，可以将任意类型的值转化成数值。</p>
+<ol start="2">
+<li><strong><em>String()</em></strong></li>
+</ol>
+<p>String函数可以将任意类型的值转化成字符串，转换规则如下。</p>
+<ol start="3">
+<li><strong><em>Boolean()</em></strong></li>
+</ol>
+<p>Boolean函数可以将任意类型的值转为布尔值。</p>
+<h4 id="错误与异常处理"><a href="#错误与异常处理" class="headerlink" title="错误与异常处理"></a>错误与异常处理</h4><ul>
+<li>错误对象</li>
+</ul>
+<p>JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。JavaScript 原生提供Error构造函数，<br>所有抛出的错误都是这个构造函数的实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var err = new Error(&apos;出错了&apos;);</span><br><span class="line">err.message // &quot;出错了&quot;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>throw 语句<br>throw语句的作用是手动中断程序执行，抛出一个错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	if (x &lt;= 0) &#123;</span><br><span class="line">  	throw new Error(&apos;x 必须为正数&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>try…catch 结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line"> 	throw new Error(&apos;出错了!&apos;);</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">	 console.log(e.name + &quot;: &quot; + e.message);</span><br><span class="line"> 	console.log(e.stack);</span><br><span class="line">&#125;</span><br><span class="line">// Error: 出错了!</span><br><span class="line">//   at &lt;anonymous&gt;:3:9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>finally 代码块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	function cleansUp() &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    throw new Error(&apos;出错了……&apos;);</span><br><span class="line">    console.log(&apos;此行不会执行&apos;);</span><br><span class="line">  &#125; finally &#123;</span><br><span class="line">    console.log(&apos;完成清理工作&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">cleansUp()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="console-对象与控制台"><a href="#console-对象与控制台" class="headerlink" title="console 对象与控制台"></a>console 对象与控制台</h3><ul>
+<li>console 对象</li>
+</ul>
+<p>console对象是 JavaScript 的原生对象，它有点像 Unix 系统的标准输出stdout和标准错误stderr，<br>可以输出各种信息到控制台，并且还提供了很多有用的辅助方法。</p>
+<p>在浏览器的开发者工具下通常可以找到控制台</p>
+<p>按 F12 或者Control + Shift + j（PC）</p>
+<ul>
+<li>console 对象的静态方法</li>
+</ul>
+<p><strong><em>console.log()，console.info()</em></strong></p>
+<p>console.log方法用于在控制台输出信息。它可以接受一个或多个参数，将它们连接起来输出。</p>
+<p>console.info是console.log方法的别名，用法完全一样。只不过console.info方法会在输出信息的前面，加上一个蓝色图标。</p>
+<p>console.debug方法与console.log方法类似，会在控制台输出调试信息。但是，默认情况下，console.debug输出的信息不会显示，</p>
+<ul>
+<li>debugger 语句</li>
+</ul>
+<p>debugger语句主要用于除错，作用是设置断点。如果有正在运行的除错工具，程序运行到debugger语句时会自动停下。如果没有除错工具，debugger语句不会产生任何结果，JavaScript 引擎自动跳过这一句。</p>
+<p>Chrome 浏览器中，当代码运行到debugger语句时，就会暂停运行，自动打开脚本源码界面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	for(var i = 0; i &lt; 5; i++)&#123;</span><br><span class="line">  	console.log(i);</span><br><span class="line">  	if (i === 2) debugger;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面代码打印出0，1，2以后，就会暂停，自动打开源码界面，等待进一步处理。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Joker</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/04/12/JavaScript入门语法/">http://yoursite.com/2019/04/12/JavaScript入门语法/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">Joker's Blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a></div><div class="social-share" data-disabled="google,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="next-post pull-right"><a href="/2019/02/23/Java核心技术-基础/"><span>Java核心技术-基础</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2019 By Joker</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.6"></script><script src="/js/fancybox.js?version=1.5.6"></script><script src="/js/sidebar.js?version=1.5.6"></script><script src="/js/copy.js?version=1.5.6"></script><script src="/js/fireworks.js?version=1.5.6"></script><script src="/js/transition.js?version=1.5.6"></script><script src="/js/scroll.js?version=1.5.6"></script><script src="/js/head.js?version=1.5.6"></script><script src="/js/search/local-search.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
