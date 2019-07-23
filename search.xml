@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>简洁直白图解“三次握手，四次挥手”</title>
+      <link href="/2019/05/20/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
+      <url>/2019/05/20/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简洁直白图解TCP“三次握手和四次挥手”"><a href="#简洁直白图解TCP“三次握手和四次挥手”" class="headerlink" title="简洁直白图解TCP“三次握手和四次挥手”"></a>简洁直白图解TCP“三次握手和四次挥手”</h2><blockquote><p>参考学习<a href="https://juejin.im/post/5b29d2c4e51d4558b80b1d8c#comment" target="_blank" rel="noopener">：跟着动画来学习TCP三次握手和四次挥手</a>、<a href="https://juejin.im/post/5ad4094e6fb9a028d7011069" target="_blank" rel="noopener">小哥哥，小姐姐，我有一份tcp、http面试指南你要吗？</a></p></blockquote><p>一提起TCP/IP协议，基本大家伙都会说TCP啊，“三次握手，四次挥手”嘛。距离上次看计算机网络书已经过去较长的时间了，这次我们就来重新认识一下TCP的“三次握手和四次挥手”。</p><h4 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h4><p>在现实的应用场景中会有各种各样的端设备，这里我们就暂时将其分为客户端和服务端。</p><p>下图为TCP通信中客户端与服务端的连接示意图：<br><img src="http://wx1.sinaimg.cn/mw690/006Dr5U1ly1g4slhyo4dcj30hg0iw0sx.jpg" alt="TCP三次握手"></p><p>TCP的三次握手是客户端与服务器建立连接之前的准备工作，客户端在前请求服务端资源前首先需要建立TCP连接，具体流程为：</p><ul><li>首先资源申请方（客户端）在建立TCP前会进入syn_sent状态（syn package has been sent）</li><li>之后客户端会向服务端发送syn标识（syn=1）随机产生seq number的数据包到服务器，使服务端知晓客户端要与其进行TCP连接</li><li>目标资源方（服务端）在接收到来自客户端的syn标识后，服务端会进入syn_rcvd状态</li><li>进入syn_rcvd状态的服务端随即向客户端发送ack+syn（ack=seq+1），即表示已收到服务端的连接请求（其实这里是两步合成一步来执行了syn+ack）</li><li>客户端在收到来自服务端的应答标识后（ack）,客户端随即进入established状态，随后发出客户端的ack标识，来通知以收到服务端的ack+syn</li><li>服务端再次收到来自客户端的ack标识后，表明客户端已经入established状态，随即自己也进入established状态</li></ul><h4 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h4><p>四次挥手是客户端和服务器在断开连接前的准备工作，具体流程为：<br><img src="https://i.loli.net/2019/07/22/5d35940c1b0ac66605.jpg" alt="TCP-四次挥手.jpg"></p><ul><li>首先客户端会进入一个停止等待状态，并且会想服务器发送fin1报文</li><li>服务端在收到fin1报文后混进入close_wait状态，并向客户端发送ack应答报文表示已收到，使客户端随即进入fin_wait_2</li><li>上述过程后客户端以向服务器发完断开连接的报文(客户端已经表示我说完了，此时属于半关闭状态，这时服务器还是可以向客户端发送信息的)</li><li>随后客户端会向客户端发送fin2报文（此过程为服务器向客户端发送断开连接的报文）</li><li>客户端在收到fin2后会返回应答ack报文，随即进入time_wait（这是一个特殊的状态，是主动关闭的一方在回复完对方的挥手后进入的一个长期状态，这个状态标准的持续时间是4分钟，4分钟后才会进入到closed状态，释放套接字资源。不过在具体实现上这个时间是可以调整的）</li><li>服务端在收到来自客户端的ack应答报文后随即关闭，之后的客户端会在达到time_wait的阈值时间后断开连接，释放资源</li></ul><p>关于TCP的相关问题还是比较复杂的，本文只是用最简单直白的方法描述了TCP/IP的“三次握手和四次挥手”，关于深层次的TCP问题推荐阅读《TCP/IP详解 卷1：协议》</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript入门语法</title>
       <link href="/2019/04/12/JavaScript%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/"/>
       <url>/2019/04/12/JavaScript%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</url>
