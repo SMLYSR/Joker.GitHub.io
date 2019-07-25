@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Spring相关小结</title>
+      <link href="/2019/07/26/Spring%E7%9B%B8%E5%85%B3%E5%B0%8F%E7%BB%93/"/>
+      <url>/2019/07/26/Spring%E7%9B%B8%E5%85%B3%E5%B0%8F%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h4 id="Spring相关小结"><a href="#Spring相关小结" class="headerlink" title="Spring相关小结"></a>Spring相关小结</h4><p>Spring是一个相对轻量级的Java开发框架，用于简化Java程序的开发，其特点：</p><ul><li>基于POJO轻量级和最小侵入式开发</li><li>通过依赖注入和面向接口实现松耦合 （IOC/DI）</li><li>基于切面和惯例进行声明式编程（AOP）</li></ul><p><img src="https://i.loli.net/2019/07/26/5d39d5e697e9831418.jpg" alt="Spring框架图.jpg"></p><p><strong>如图，<em>为Spring框架图</em></strong></p><p>由于Spring框架中涉及到很多Java设计模式的东西，推荐阅读《Java编程思想》。这里主要介绍Spring的一些特点和用法。</p><h5 id="Spring-Ioc和AOP"><a href="#Spring-Ioc和AOP" class="headerlink" title="Spring Ioc和AOP"></a>Spring Ioc和AOP</h5><ul><li><p><em>Ioc为控制反转将原本在程序中手动创建对象的控制权，交由Spring框架来管理，</em> IoC 容器是 Spring 用来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。</p></li><li><p>控制反转其实是一种设计模式，可以使用手动的方式来达到目的（只是需要手动new 一堆类），而Spring提供了Ioc容器 ， 将本来自己手动new的那一堆类通过你之前写的配置文件（xml/注解）放入Ioc容器中，来达到“开箱即用的效果”），其次Ioc再有一个好处就是我们在创建实例的时候不需要了解其中的细节</p></li><li><p>AOP为面向切面编程将那些与业务无关，却为业务模块所共同调用的逻辑或责任（例如事务处理、日志管理、权限控制等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性</p></li><li>其实我们也可以使用动态代理来实现面向切面编程（此处主要涉及到设计模式）</li></ul><h5 id="关于Spring中的Bean"><a href="#关于Spring中的Bean" class="headerlink" title="关于Spring中的Bean"></a>关于Spring中的Bean</h5><ul><li>Bean来自于Spring的Ioc特性，其实Bean就是Spring反转控制后的产物，即可以把Bean理解为对象（ 被反转控制的对象的）的代理人，它拥有该对象的全部属性方法</li></ul><h5 id="SpringIoc方面的注解"><a href="#SpringIoc方面的注解" class="headerlink" title="SpringIoc方面的注解"></a>SpringIoc方面的注解</h5><p>SpringIoc方面的注解可分为两类：</p><ul><li>一类是注册Bean，将类转换化为一个Bean放入Ioc容器中，例如@Component , @Repository , @ Controller , @Service , @Configration</li><li>一类是使用Bean，完成属性和方法的组装，例如@Autowired , @Resource</li></ul><p>关于@Component和@Bean的区别：</p><ul><li>首先上文已提到，@Component和@Bean都是在注册Bean， 但这两个注解的作用 对象不同，@Component作用于类上而@Bean作用域方法上</li><li>@Bean 注解比 Component 注解的自定义性更强，而且很多地方我们只能通过 @Bean 注解来注册bean。比如当我们引用第三方库中的类需要装配到 Spring容器时，则只能通过 @Bean来实现（暂时还没有找到比较清晰的实例）</li></ul><h5 id="Spring的事务管理"><a href="#Spring的事务管理" class="headerlink" title="Spring的事务管理"></a>Spring的事务管理</h5><p>主要是使用声明式事务（基于XML和基于注解的）</p><p>其实传统使用Spring的姿势是使用XML的方式去进行配置Bean的，但是随着SpringBoot的流行，官方都跟推荐零配置（XML）的解决方案，所以我们更喜欢使用SpringBoot，使用注解的方式来完成配置</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java基础 - 集合</title>
       <link href="/2019/07/10/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/"/>
       <url>/2019/07/10/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/</url>
